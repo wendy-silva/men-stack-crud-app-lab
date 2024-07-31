@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meals</title>
+</head>
+<body>
+    <h1>Meals</h1>
+    <ul>
+      <% meals.forEach(meal => { %>
+        <li>
+          <a href="/meals/<%= meal._id %>"> <%= meal.name %> </a>
+        </li>
+      <% }); %>
+    </ul>
+    <a href="/meals/new">Add New Meals</a>
+    <a href="/Home">Home</a>
+</body>
+</html>

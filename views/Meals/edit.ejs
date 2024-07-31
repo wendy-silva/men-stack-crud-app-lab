@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- update the header -->
+    <h1>Edit <%= meal.name %></h1>
+    <form action="/meals/<%=meal._id%>?_method=PUT" method="POST">
+        <label for="name">Dish:</label>
+        <input type="text" name="name" value="<%= meal.name %>" />
+      
+        <label for="isReadyToMake">Ready to Eat?</label>
+        <input type="checkbox" name="isReadyToMake" id="isReadyToMake" />
+      
+        <button type="submit">Update Meal</button>
+      </form>
+    <a href="/meals">Back to Meals</a>
+  </body>
+</html>
